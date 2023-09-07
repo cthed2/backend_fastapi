@@ -1,6 +1,7 @@
 # Importa el tipo Union desde el módulo typing. 
 # Esto se utiliza para especificar que un tipo de variable puede ser uno de varios tipos.
 from typing import Union
+
 # Importa la clase BaseModel desde el módulo pydantic.
 # BaseModel es una clase base para definir modelos de datos con validación de tipos,
 # serialización y documentación integradas. Es ampliamente utilizado con FastAPI
@@ -11,6 +12,7 @@ from pydantic import BaseModel
 # Define una clase `Item` que hereda de `BaseModel` de Pydantic.
 # Esta clase representa un modelo de datos para un ítem, con validación de tipos,
 # serialización y documentación integradas gracias a Pydantic.
+# Es como si se traduciera bidireccionalmente a un archivo json.
 class Item(BaseModel):
     # Define un atributo `name` que debe ser de tipo string (str).
     name: str
